@@ -63,8 +63,8 @@ validationEP <- function(id_part, ds, dataset_name, number_folds, namesLabels, f
   # start build partitions
   # from fold 1 to last partition
   f = 1
-  #buildBellPartitions <- foreach(f = 1:number_folds) %dopar% {
-  while(f<=10){
+  buildBellPartitions <- foreach(f = 1:number_folds) %dopar% {
+  #while(f<=10){
     
     cat("\nFold: ", f)   
     
@@ -338,7 +338,7 @@ validationEP <- function(id_part, ds, dataset_name, number_folds, namesLabels, f
       gc()
     } # END GROUP
     
-    f = f + 1
+    #f = f + 1
     gc()
   }
   
